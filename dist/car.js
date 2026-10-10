@@ -6,7 +6,7 @@ const renderer=new THREE.WebGLRenderer({alpha:true,antialias:true,powerPreferenc
 renderer.setPixelRatio(Math.min(devicePixelRatio,1.7));renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.1;host.append(renderer.domElement);
 renderer.domElement.setAttribute('aria-label','Rotate the 3D car with left and right arrow keys, or drag.');renderer.domElement.setAttribute('tabindex','0');renderer.domElement.setAttribute('role','img');
 const scene=new THREE.Scene();
-const camera=new THREE.PerspectiveCamera(34,1,.1,100);camera.position.set(-5.4,3.0,5.8);camera.lookAt(0,.65,0);
+const camera=new THREE.PerspectiveCamera(31,1,.1,100);camera.position.set(-5.4,3.0,5.8);camera.lookAt(0,.65,0);
 scene.add(new THREE.HemisphereLight(0xf7fff1,0x5b6956,3));
 const key=new THREE.DirectionalLight(0xffffff,5);key.position.set(-3,7,4);key.castShadow=true;key.shadow.mapSize.set(1024,1024);key.shadow.camera.left=-6;key.shadow.camera.right=6;key.shadow.camera.top=6;key.shadow.camera.bottom=-6;key.shadow.normalBias=.04;scene.add(key);
 const rim=new THREE.DirectionalLight(0xe7f4db,3);rim.position.set(4,3,-4);scene.add(rim);
